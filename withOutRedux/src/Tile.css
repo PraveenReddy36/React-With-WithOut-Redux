@@ -1,0 +1,11 @@
+
+.tile {
+    color: red;
+    border: 2px solid;
+    padding: 5px;
+    margin: 10px;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    justify-content:'center',
+}
