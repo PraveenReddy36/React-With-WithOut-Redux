@@ -1,0 +1,48 @@
+# Concept
+
+1. Store - single source of data for app (State of entire app)
+2. Any CONNECTED component can access data from store and the data is sent as props
+3. Reducers (Function), can only add / (modify) data in the store
+4. Actions (Objects), tell reducers about what data to add & where to add.
+5. Actions are always called from components
+6. The process of calling actions is called Dispatch
+
+
+# Implementation
+
+1. Create Store
+2. Provide store to entire application
+3. Connect componets
+4. Create Reducer
+5. Reducer gets reducerState and actions as default arguements
+6. Pass it into an object and pass the object to combineReducer
+7. Pass the rootreducer into CreateStore as arguement.
+8. In connect pass the "mapStateToProps" as arguement & access the data from props of the component
+7. Only in CONNECTED components, Dispatch will be availble in props
+8. Dispatch with action object, and create corresponding case in reducers.
+9. Do logic you need and return new value in reducer. 
+
+
+// Store 
+
+
+store = {
+    firstReducer: {
+        ...firstReducerState
+    },
+    secondReducer: {
+        ...secondReducerState
+    }
+    .
+    .
+    .
+    nReducer: {
+        ...nReducerState
+    }
+}
+
+// Action
+
+{
+    type: "INCREASE VALUE",
+}

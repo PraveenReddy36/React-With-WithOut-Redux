@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Wall from './Wall';
 import * as serviceWorker from './serviceWorker';
+import {Provider} from 'react-redux';
+import  myStore from './store/combinedStore';
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={myStore}>
+    <Wall />
+  </Provider>,
   document.getElementById('root')
 );
 
