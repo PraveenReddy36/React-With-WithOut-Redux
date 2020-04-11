@@ -10,10 +10,13 @@ class Wall extends React.Component {
     const tilesArray = [];
 
     for(let i=0; i<100; i++) {
-      tilesArray.push(<Tile onChildClick = {()=> this.props.onChildClick(i)} clickCount= {this.props.reducer[i]}/>);
+      tilesArray.push(<Tile onChildClick = {()=> this.props.onChildClick(i)} clickCount= {this.props.reducer1[i]}/>);
     }
 
     console.log("props", this.props);
+    // this will return a object with 2 values
+    //one is reucer which contains state
+    // function which will be called/dispatched with action
     return(
       <div style={{display: 'flex', flexWrap: 'wrap'}}>
           {tilesArray}

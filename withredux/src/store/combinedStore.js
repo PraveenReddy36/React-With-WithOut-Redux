@@ -1,9 +1,9 @@
-import reducer from './reducer';
+import tileCountReducer from './reducer';
 import {createStore, combineReducers} from 'redux';
 
 const rootReducer = combineReducers(
     {
-        reducer: reducer
+        reducer1: tileCountReducer
     }
 );
 
