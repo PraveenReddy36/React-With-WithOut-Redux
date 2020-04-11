@@ -8,12 +8,13 @@ const childState = [];
 for(let i=0; i<100; i++) {
     childState.push(0);
 }
+const initialState = childState;
 
-const reducer = (childState, action) => {
+const tileCountReducer = (state = initialState, action) => {
 
     const actionType = action.type;
     const payLoad = action.tileNumber;
-    const newState = childState.slice();
+    const newState = state.slice();
 
     switch(actionType) {
         case CLICK_ON_TILE:
@@ -25,4 +26,4 @@ const reducer = (childState, action) => {
     return newState;
 }
 
-export default reducer;
+export default tileCountReducer;

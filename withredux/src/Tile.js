@@ -18,7 +18,7 @@ class Tile extends React.Component {
                 backgroundColor:colors[this.props.clickCount]
                 }
             }
-            onClick = {this.props.onChildClick()}>
+            onClick = {this.props.onChildClick}>
             <span>{this.props.clickCount}</span>
         </div>);
     }

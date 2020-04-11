@@ -1,4 +1,4 @@
-import CLICK_ON_TILE from '../actionTypes/tileActionTypes';
+import { CLICK_ON_TILE } from '../actionTypes/tileActionTypes';
 
 const clickOnTile = (tileNumber)=> {
     return {
